@@ -1,6 +1,6 @@
-var mod = angular.module('directAccessToolsMod', 
-    ['ngTagsInput',
-    'ui.bootstrap.tooltip']  // for tooltips
+var mod = angular.module('LincsDirectAccessTools', 
+    []
+    // ['ngTagsInput', 'ui.bootstrap.tooltip']  // for tooltips
 );
 
 // Filter which removes all html tags from string and returns the plain text.
@@ -32,13 +32,14 @@ mod.directive('scrollOnClick', function() {
     }
 });
 
-mod.controller('directAccessToolsCtrl',
-    ['$scope', "$element", '$sce', '$compile', '$anchorScroll', '$location',
-    function($scope, $element, $sce, $compile, $anchorScroll, $location) {
+mod.controller('DirectAccessToolsCtrl',
+    ['$scope', '$sce', '$compile', '$anchorScroll', '$location',
+    function($scope, $sce, $compile, $anchorScroll, $location) {
 
-    var DIR = 'images/apps/';
+    console.log("DirectAccessToolsCtrl init");
+    var DIR = 'libs/lincs-direct-access-tools/tool-icons/';
 
-    $scope.introText = $sce.trustAsHtml('');
+    // $scope.introText = $sce.trustAsHtml('');
 
     $scope.mode = "";  // selected mode
 
@@ -423,28 +424,28 @@ mod.controller('directAccessToolsCtrl',
             // directive: "LDR-bar",
             cssClass: "ldr"
         },
-        // {
-        //     title: "Lincscloud",
-        //     url: "http://www.lincscloud.org/",
-        //     image: DIR + "cmap2.jpg",
-        //     description: {
-        //         main: "Lincs cloud is designed to make LINCS L1000 data accessible to a wide audience.",
-        //         api: "For programmatic access refer to the <a target='_blank' href='http://api.lincscloud.org/'>API documentation</a>.",
-        //         analysis: "Web-based analysis of the L1000 dataset in the CLUE unified research environment. In development.",
-        //         search: "The API can be used for searching the L1000 dataset. Note that the direct access search only provides a small fraction of the functionality available through the API.",
-        //         download: "The entire L1000 dataset can be <a target='_blank' href='http://download.lincscloud.org/'>downloaded from Amazon S3</a>.",
-        //         drugs: "A collection of ~18000 small-molecule compounds.",
-        //         genetics: "Systematic RNAi/shRNA screens and cDNA overexpression screens.",
-        //         cells: "A wide range of cell lines.",
-        //         assay: "L1000 gene expression of ~1000 landmark genes and image-based morphology profiles."
-        //     },
-        //     modes: {
-        //         functionality: ["api", "analysis", "search", "download"],
-        //         content: ["drugs", "genetics", "cells"]
-        //     },
-        //     directive: "Lincscloud-bar",
-        //     cssClass: "lincscloud"
-        // },
+        {
+            title: "Lincscloud",
+            url: "http://www.lincscloud.org/",
+            image: DIR + "cmap2.jpg",
+            description: {
+                main: "Lincs cloud is designed to make LINCS L1000 data accessible to a wide audience.",
+                api: "For programmatic access refer to the <a target='_blank' href='http://api.lincscloud.org/'>API documentation</a>.",
+                analysis: "Web-based analysis of the L1000 dataset in the CLUE unified research environment. In development.",
+                search: "The API can be used for searching the L1000 dataset. Note that the direct access search only provides a small fraction of the functionality available through the API.",
+                download: "The entire L1000 dataset can be <a target='_blank' href='http://download.lincscloud.org/'>downloaded from Amazon S3</a>.",
+                drugs: "A collection of ~18000 small-molecule compounds.",
+                genetics: "Systematic RNAi/shRNA screens and cDNA overexpression screens.",
+                cells: "A wide range of cell lines.",
+                assay: "L1000 gene expression of ~1000 landmark genes and image-based morphology profiles."
+            },
+            modes: {
+                functionality: ["api", "analysis", "search", "download"],
+                content: ["drugs", "genetics", "cells"]
+            },
+            directive: "Lincscloud-bar",
+            cssClass: "lincscloud"
+        },
         {
             title: "Network2Canvas",
             url: "http://www.maayanlab.net/N2C/",
@@ -475,27 +476,27 @@ mod.controller('directAccessToolsCtrl',
                 functionality: ["collaboration", "education"],
                 // content: [""]
             }
+        },
+        {
+            title: "HMS LINCS Database",
+            url: "http://lincs.hms.harvard.edu/db/",
+            image: DIR + "hms_lincs.png",
+            description: {
+                main: "Harvard Medical School's LINCS database.",
+                search: "General text-based search. Find datasets and information about experimental reagents. Small-molecule compounds can be queried based on SMILES.",
+                download: "Data is hosted on the web-site and can be downloaded.",
+                api: "Programmatic access is detailed in the <a target='_blank' href='https://docs.google.com/document/d/1R_d_1UWO0C9y1TceXpKIUkhjk08DfvP1D19txi4Tbas/edit'>URL Scheme and Access Guide</a>.",
+                assays: "The available data are focused on dose-dependence and dynamics of responses to small-molecule perturbations. It primarily has data on biochemical binding assays and microscopy imaging measuring cell viability.",
+                drugs: "A wide range of small-molecule compounds.",
+                cells: "A wide range of cell lines."
+            },
+            modes: {
+                functionality: ["search", "download", "api"],
+                content: ["assays", "drugs", "cells"]
+            },
+            directive: "HMS-DB-bar",
+            cssClass: "hms-db"
         }
-        // {
-        //     title: "HMS LINCS Database",
-        //     url: "http://lincs.hms.harvard.edu/db/",
-        //     image: DIR + "hms_lincs.png",
-        //     description: {
-        //         main: "Harvard Medical School's LINCS database.",
-        //         search: "General text-based search. Find datasets and information about experimental reagents. Small-molecule compounds can be queried based on SMILES.",
-        //         download: "Data is hosted on the web-site and can be downloaded.",
-        //         api: "Programmatic access is detailed in the <a target='_blank' href='https://docs.google.com/document/d/1R_d_1UWO0C9y1TceXpKIUkhjk08DfvP1D19txi4Tbas/edit'>URL Scheme and Access Guide</a>.",
-        //         assays: "The available data are focused on dose-dependence and dynamics of responses to small-molecule perturbations. It primarily has data on biochemical binding assays and microscopy imaging measuring cell viability.",
-        //         drugs: "A wide range of small-molecule compounds.",
-        //         cells: "A wide range of cell lines."
-        //     },
-        //     modes: {
-        //         functionality: ["search", "download", "api"],
-        //         content: ["assays", "drugs", "cells"]
-        //     },
-        //     directive: "HMS-DB-bar",
-        //     cssClass: "hms-db"
-        // },
     ];
 
 
@@ -654,7 +655,7 @@ mod.directive("scrollButton", function() {
 });
 
 // Wrapper for tools. Sets up the frame with icon, 
-mod.directive("tool", function($compile, $timeout) {
+mod.directive("tool", ["$compile", "$timeout", function($compile, $timeout) {
     return {
         restrict: 'EA',
         scope: {
@@ -668,9 +669,18 @@ mod.directive("tool", function($compile, $timeout) {
             // console.log("test");
             var tool_obj = scope.toolData;
             if (tool_obj && tool_obj.directive !== undefined) {
-                elem.find('placeholder').replaceWith(
-                    $compile("<hr>" + '<' + tool_obj.directive + '></' + tool_obj.directive + '>')(scope)
-                );
+                // elem 
+                // console.log(tool_obj.directive);
+                var compiled = $compile("<hr>" + '<' + tool_obj.directive + '></' + tool_obj.directive + '>');
+                // console.log(compiled);
+
+                elem.find('placeholder').replaceWith(compiled(scope));
+
+                // elem.html("<hr>" + '<' + tool_obj.directive + '></' + tool_obj.directive + '>');
+                // $compile(elem.contents())(scope);
+
+                // elem.find("placeholder").html("<hr>" + '<' + tool_obj.directive + '></' + tool_obj.directive + '>');
+                // $compile(elem.find("placeholder").contents())(scope);
             };
 
             // Call change mode after directive has rendered. timeout makes it work -- even with 0ms. It's magic.
@@ -775,11 +785,13 @@ mod.directive("tool", function($compile, $timeout) {
                 $scope.list_query.down = genes;
             });
         }],
-        templateUrl: "view/getting-started/tool-directive.html"
+        // templateUrl: script_path + "/partials/tool-directive.html"
+        templateUrl: "/libs/lincs-direct-access-tools/partials/tool-directive.html"
+        // templateUrl: "./partials/tool-directive.html"
     }
-});
+}]);
 
-mod.directive('lincsDataPortalBar', function($compile) {
+mod.directive('lincsDataPortalBar', function() {
     return {
         restrict: 'E',
         scope: true,
@@ -810,11 +822,11 @@ mod.directive('lincsDataPortalBar', function($compile) {
                 });
             };
         }],
-        templateUrl: 'view/getting-started/lincs-data-portal.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/lincs-data-portal.html'
     }
 });
 
-mod.directive('piLincsBar', function($compile) {
+mod.directive('piLincsBar', ["$compile", function($compile) {
     return {
         restrict: 'E',
         scope: true,
@@ -842,11 +854,11 @@ mod.directive('piLincsBar', function($compile) {
                 });
             };
         }],
-        templateUrl: 'view/getting-started/pi-lincs.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/pi-lincs.html'
     }
-});
+}]);
 
-mod.directive('iLincsBar', function($compile) {
+mod.directive('iLincsBar', ["$compile", function($compile) {
     return {
         restrict: 'E',
         scope: true,
@@ -876,9 +888,9 @@ mod.directive('iLincsBar', function($compile) {
                 window.open(searchUrl, '_blank');
             };
         }],
-        templateUrl: 'view/getting-started/i-lincs.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/i-lincs.html'
     }
-});
+}]);
 
 mod.directive('l1000cds2Textarea', function() {
     return {
@@ -948,7 +960,7 @@ mod.directive('l1000cds2Textarea', function() {
                 });
             }
         }],
-        templateUrl: 'view/getting-started/l1000cds2.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/l1000cds2.html'
     }
 });
 
@@ -1026,7 +1038,7 @@ mod.directive('enrichrTextarea', function() {
                 });
             }
         }],
-        templateUrl: 'view/getting-started/enrichr.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/enrichr.html'
     }
 });
 
@@ -1054,7 +1066,7 @@ mod.directive('slicrBar', function() {
                 $scope.tags = query.split(" ");
             });
         }],
-        templateUrl: 'view/getting-started/slicr.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/slicr.html'
     }
 });
 
@@ -1092,7 +1104,7 @@ mod.directive('harmonizomeBar', function() {
             };
 
         }],
-        templateUrl: 'view/getting-started/harmonizome.html'
+        templateUrl: '/libs/lincs-direct-access-tools/templates/harmonizome.html'
     }
 });
 
@@ -1116,7 +1128,7 @@ mod.directive("hmsDbBar", function() {
                 // console.log("broadcast recieved: ", event, mode_id);
             });
         }],
-        templateUrl: "view/getting-started/hms-db.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/hms-db.html"
     }
 });
 
@@ -1133,7 +1145,7 @@ mod.directive("lifeBar", function() {
                     "_blank");
             };
         }],
-        templateUrl: "view/getting-started/life.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/life.html"
     }
 });
 
@@ -1158,7 +1170,7 @@ mod.directive("network2canvasBar", function() {
                 }
             };
         }],
-        templateUrl: "view/getting-started/network2canvas.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/network2canvas.html"
     }
 });
 
@@ -1181,7 +1193,7 @@ mod.directive("canvasBrowserBar", function() {
                 }
             };
         }],
-        templateUrl: "view/getting-started/canvas-browser.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/canvas-browser.html"
     }
 });
 
@@ -1204,7 +1216,7 @@ mod.directive("geo2enrichrBar", function() {
                 }
             };
         }],
-        templateUrl: "view/getting-started/geo2enrichr.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/geo2enrichr.html"
     }
 });
 
@@ -1227,7 +1239,7 @@ mod.directive("paeaBar", function() {
                 }
             };
         }],
-        templateUrl: "view/getting-started/paea.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/paea.html"
     }
 });
 
@@ -1287,7 +1299,7 @@ mod.directive("lincscloudBar", function() {
             });
 
         }],
-        templateUrl: "view/getting-started/lincscloud.html"
+        templateUrl: "/libs/lincs-direct-access-tools/templates/lincscloud.html"
     }
 });
 

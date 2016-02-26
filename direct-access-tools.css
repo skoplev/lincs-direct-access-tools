@@ -1,5 +1,5 @@
 /* Quick access tools */
-.category-page.direct-access-tools-page .tools-summary img {
+img.dashboard-icon {
   margin-left: 10px;
   margin-bottom: 10px;
   width: 30px;
@@ -12,6 +12,13 @@
 /* Direct access tool common styling */
 div.tool {
   font-size: 12px;
+  padding: 5px;
+}
+
+div.tool.panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(225,225,225);
 }
 div.tool form {
   text-align: center;
@@ -186,59 +193,59 @@ div.tool p.data-content-description {
 
 /*div.tool div.action button.hint:hover*/
 div.tool div.action button.search {
-  background-image: url(/images/concierge-icons/find_solid.svg);
+  background-image: url(category-icons/find_solid.svg);
 }
 
 div.tool div.action button.analysis {
-  background-image: url(/images/concierge-icons/stacked.svg);
+  background-image: url(category-icons/stacked.svg);
 }
 
 div.tool div.action button.api {
-  background-image: url(/images/concierge-icons/web2.svg);
+  background-image: url(category-icons/web2.svg);
 }
 
 div.tool div.action button.navigation {
-  background-image: url(/images/concierge-icons/compass.svg);
+  background-image: url(category-icons/compass.svg);
 }
 
 div.tool div.action button.download {
-  background-image: url(/images/concierge-icons/download168.svg);
+  background-image: url(category-icons/download168.svg);
 }
 
 div.tool div.action button.cells {
-  background-image: url(/images/concierge-icons/cell1.svg);
+  background-image: url(category-icons/cell1.svg);
 }
 
 div.tool div.action button.drugs {
-  background-image: url(/images/concierge-icons/chemistry43.svg);
+  background-image: url(category-icons/chemistry43.svg);
 }
 
 div.tool div.action button.genetics {
-  background-image: url(/images/concierge-icons/dna17.svg);
+  background-image: url(category-icons/dna17.svg);
 }
 
 div.tool div.action button.assays {
-  background-image: url(/images/concierge-icons/lab2.svg);
+  background-image: url(category-icons/lab2.svg);
 }
 /* External data */
 div.tool div.action button.external {
-  background-image: url(/images/concierge-icons/data110.svg);
+  background-image: url(category-icons/data110.svg);
 }
 
 div.tool div.action button.education {
-  background-image: url(/images/concierge-icons/education.svg);
+  background-image: url(category-icons/education.svg);
 }
 
 div.tool div.action button.collaboration {
-  background-image: url(/images/concierge-icons/social-network12.svg);
+  background-image: url(category-icons/social-network12.svg);
 }
 
 div.tool div.action button.integration {
-  background-image: url(/images/concierge-icons/integration.svg);
+  background-image: url(category-icons/integration.svg);
 }
 
 div.tool div.action button.publication {
-  background-image: url(/images/concierge-icons/text70.svg);
+  background-image: url(category-icons/text70.svg);
 }
 
 div.category-selector {
@@ -270,14 +277,15 @@ p.hand-written {
   font: 400 24px/0.8 'Great Vibes', Helvetica, sans-serif;
   text-align: center;
 }
-.panel {
-  border-style: solid;
-  /*border-color: rgb(230,230,230);*/
-  border-color: rgb(235,235,235);
-  padding: 5px;
-  /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);
-}
+
+// .panel {
+//   border-style: solid;
+//   /*border-color: rgb(230,230,230);*/
+//   border-color: rgb(235,235,235);
+//   padding: 5px;
+//   /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+//   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);
+// }
 
 .center-logo {
   max-height: 30px;
@@ -285,10 +293,10 @@ p.hand-written {
 }
 
 /* bootstrip fix. Words for .col-sm-6 classes only.*/
-.col-sm-6:nth-child(2n+1){
-    clear: left;
-}
+// .col-sm-6:nth-child(2n+1){
+//     clear: left;
+// }
 
-.col-sm-4:nth-child(3n+1){
+div#tool-dir .col-sm-4:nth-child(3n+1){
     clear: left;
 }
