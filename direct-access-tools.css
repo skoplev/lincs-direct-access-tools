@@ -351,14 +351,14 @@ p.hand-written {
   text-align: center;
 }
 
-// .panel {
-//   border-style: solid;
-//   /*border-color: rgb(230,230,230);*/
-//   border-color: rgb(235,235,235);
-//   padding: 5px;
-//   /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
-//   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);
-// }
+.panel {
+  /*border-style: solid;*/
+  /*border-color: rgb(230,230,230);*/
+  /*border-color: rgb(235,235,235);*/
+  /*padding: 5px;*/
+  /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+  /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.10);*/
+}
 
 .center-logo {
   max-height: 30px;
@@ -366,8 +366,9 @@ p.hand-written {
 }
 
 /* bootstrip fix. Words for .col-sm-6 classes only.*/
-// .col-sm-6:nth-child(2n+1){
-//     clear: left;
+
+// .concierge .col-sm-6:nth-child(2n+1){
+//   clear: left;
 // }
 
 div#tool-dir .col-sm-4:nth-child(3n+1){
