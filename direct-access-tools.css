@@ -1,3 +1,76 @@
+/* Concierge styling */
+.category-page.getting-started-page .section {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  font-family: 'Archivo Narrow', 'Helvetica Neue', 'Arial', sans-serif;
+  padding: 20px;
+  vertical-align: middle;
+  background: #f1f1f1;
+  margin-bottom: 20px;
+}
+.category-page.getting-started-page .section:hover {
+  cursor: pointer;
+  background-color: #C7E8F2;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+.category-page.getting-started-page .section.subtle {
+  opacity: 0.3;
+  box-shadow: 'none';
+}
+.category-page.getting-started-page .section.subtle:hover {
+  opacity: 1.0;
+  -webkit-transition: opacity 500ms linear;
+  -moz-transition: opacity 500ms linear;
+  -o-transition: opacity 500ms linear;
+  -ms-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+}
+.category-page.getting-started-page .section ul {
+  opacity: .5;
+}
+.category-page.getting-started-page .section > img.horizontal {
+  width: 50px;
+}
+.category-page.getting-started-page .section > img.vertical {
+  height: 36px;
+}
+.category-page.getting-started-page .start p,
+.category-page.getting-started-page .middle,
+.category-page.getting-started-page .end p {
+  text-align: center;
+  vertical-align: middle;
+}
+.category-page.getting-started-page .start p {
+  font-size: 24px;
+  height: 90px;
+}
+.category-page.getting-started-page .middle {
+  display: none;
+}
+.category-page.getting-started-page .middle p {
+  font-size: 16px;
+  height: 110px;
+}
+.category-page.getting-started-page .end .row {
+  display: none;
+}
+.category-page.getting-started-page .end .row p {
+  height: 110px;
+  color: black;
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+}
+.category-page.getting-started-page .end .row p:hover {
+  text-decoration: none;
+}
+.category-page.getting-started-page .content > .row {
+  display: none;
+}
+
 /* Quick access tools */
 img.dashboard-icon {
   margin-left: 10px;
@@ -193,59 +266,59 @@ div.tool p.data-content-description {
 
 /*div.tool div.action button.hint:hover*/
 div.tool div.action button.search {
-  background-image: url(category-icons/find_solid.svg);
+  background-image: url(img/category-icons/find_solid.svg);
 }
 
 div.tool div.action button.analysis {
-  background-image: url(category-icons/stacked.svg);
+  background-image: url(img/category-icons/stacked.svg);
 }
 
 div.tool div.action button.api {
-  background-image: url(category-icons/web2.svg);
+  background-image: url(img/category-icons/web2.svg);
 }
 
 div.tool div.action button.navigation {
-  background-image: url(category-icons/compass.svg);
+  background-image: url(img/category-icons/compass.svg);
 }
 
 div.tool div.action button.download {
-  background-image: url(category-icons/download168.svg);
+  background-image: url(img/category-icons/download168.svg);
 }
 
 div.tool div.action button.cells {
-  background-image: url(category-icons/cell1.svg);
+  background-image: url(img/category-icons/cell1.svg);
 }
 
 div.tool div.action button.drugs {
-  background-image: url(category-icons/chemistry43.svg);
+  background-image: url(img/category-icons/chemistry43.svg);
 }
 
 div.tool div.action button.genetics {
-  background-image: url(category-icons/dna17.svg);
+  background-image: url(img/category-icons/dna17.svg);
 }
 
 div.tool div.action button.assays {
-  background-image: url(category-icons/lab2.svg);
+  background-image: url(img/category-icons/lab2.svg);
 }
 /* External data */
 div.tool div.action button.external {
-  background-image: url(category-icons/data110.svg);
+  background-image: url(img/category-icons/data110.svg);
 }
 
 div.tool div.action button.education {
-  background-image: url(category-icons/education.svg);
+  background-image: url(img/category-icons/education.svg);
 }
 
 div.tool div.action button.collaboration {
-  background-image: url(category-icons/social-network12.svg);
+  background-image: url(img/category-icons/social-network12.svg);
 }
 
 div.tool div.action button.integration {
-  background-image: url(category-icons/integration.svg);
+  background-image: url(img/category-icons/integration.svg);
 }
 
 div.tool div.action button.publication {
-  background-image: url(category-icons/text70.svg);
+  background-image: url(img/category-icons/text70.svg);
 }
 
 div.category-selector {
