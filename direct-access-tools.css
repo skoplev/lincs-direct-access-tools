@@ -371,6 +371,6 @@ p.hand-written {
 //   clear: left;
 // }
 
-div#tool-dir .col-sm-4:nth-child(3n+1){
-    clear: left;
-}
+// div#tool-dir .col-sm-4:nth-child(3n+1){
+//     clear: left;
+// }

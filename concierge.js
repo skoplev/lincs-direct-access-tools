@@ -1,6 +1,67 @@
 // Concierge module
 var mod = angular.module("Concierge", ["lincsCentersMod", "LincsDirectAccessTools"]);
 
+mod.directive("concierge", function() {
+    return {
+        restrict: "A",
+        controller: ["$scope", function($scope) {
+            // Currently the same controller as
+            var fade_time = 300;  // animation speed in ms
+            var started = false,
+                selected = [],
+                $p = $('.middle p');
+
+            // Concierge button, first selector
+            $('.start p').click(function() {
+                if (started) {
+                    // Concierge is already called, close and restart state.
+                    started = false;
+                    selected[0] = undefined;
+                    $('.end .row').fadeOut(fade_time);
+                    $('.middle').fadeOut(function() {
+                        $('.middle p').removeClass("subtle");
+                    });
+                    $('.content > .row').hide(fade_time);
+                } else {
+                    started = true;
+                    $('.middle').fadeIn(fade_time);
+                }
+            });
+
+            // Middle selectors
+            $('.middle .section').click(function() {
+                // get id
+                var class_ = '.' + $(this).parent().attr('data-selector');
+                // Grey out other selectors
+                $('.middle p').removeClass("subtle")
+                    .not(this).addClass("subtle");
+
+                // Hide previous buttons
+                $('.end .row').hide();
+                selected[0] = class_;
+                // Fade in submenu, if any
+                $('.end').find(class_).fadeIn(fade_time)
+                $('.content > .row').hide();
+
+                $('.end p').removeClass("subtle");
+            });
+
+            $('.end p').click(function() {
+                // hide main content from previous selection
+                $('.content > .row').hide();
+                // Find name of selected content
+                var class_ = '.' + $(this).parent().attr('data-selector');
+                // Show selected content
+                $('.content').find(class_).fadeIn(fade_time);
+
+                $('.end p').removeClass("subtle")
+                    .not(this).addClass("subtle");
+            });
+        }],
+        templateUrl: "/libs/lincs-direct-access-tools/views/concierge.html"
+    }
+})
+
 // Concierge menu selection
 mod.controller("ConciergeCtrl", ["$scope", function($scope) {
     var fade_time = 300;  // animation speed in ms
