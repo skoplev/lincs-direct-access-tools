@@ -1,5 +1,5 @@
 var mod = angular.module('LincsDirectAccessTools', 
-    []
+    ["mgcrea.ngStrap.popover"]
     // ['ngTagsInput', 'ui.bootstrap.tooltip']  // for tooltips
 );
 
@@ -36,7 +36,6 @@ mod.controller('DirectAccessToolsCtrl',
     ['$scope', '$sce', '$compile', '$anchorScroll', '$location',
     function($scope, $sce, $compile, $anchorScroll, $location) {
 
-    console.log("DirectAccessToolsCtrl init");
     var DIR = 'libs/lincs-direct-access-tools/tool-icons/';
 
     // $scope.introText = $sce.trustAsHtml('');
@@ -712,7 +711,7 @@ mod.directive("tool", ["$compile", "$timeout", function($compile, $timeout) {
             var title = $scope.toolData.title
             // console.log(title);
             $scope.text_title = $("<html>" + $scope.toolData.title + "</html>").text();
-            console.log($scope.text_title);
+            // console.log($scope.text_title);
 
             $scope.main_description = $sce.trustAsHtml($scope.toolData.description.main);
 
