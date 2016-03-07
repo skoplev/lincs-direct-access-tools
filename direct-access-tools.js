@@ -785,7 +785,7 @@ mod.directive("tool", ["$compile", "$timeout", function($compile, $timeout) {
             });
         }],
         // templateUrl: script_path + "/partials/tool-directive.html"
-        templateUrl: "/libs/lincs-direct-access-tools/partials/tool-directive.html"
+        templateUrl: "libs/lincs-direct-access-tools/partials/tool-directive.html"
         // templateUrl: "./partials/tool-directive.html"
     }
 }]);
@@ -821,7 +821,7 @@ mod.directive('lincsDataPortalBar', function() {
                 });
             };
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/lincs-data-portal.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/lincs-data-portal.html'
     }
 });
 
@@ -853,7 +853,7 @@ mod.directive('piLincsBar', ["$compile", function($compile) {
                 });
             };
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/pi-lincs.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/pi-lincs.html'
     }
 }]);
 
@@ -887,7 +887,7 @@ mod.directive('iLincsBar', ["$compile", function($compile) {
                 window.open(searchUrl, '_blank');
             };
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/i-lincs.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/i-lincs.html'
     }
 }]);
 
@@ -959,7 +959,7 @@ mod.directive('l1000cds2Textarea', function() {
                 });
             }
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/l1000cds2.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/l1000cds2.html'
     }
 });
 
@@ -1037,7 +1037,7 @@ mod.directive('enrichrTextarea', function() {
                 });
             }
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/enrichr.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/enrichr.html'
     }
 });
 
@@ -1065,7 +1065,7 @@ mod.directive('slicrBar', function() {
                 $scope.tags = query.split(" ");
             });
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/slicr.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/slicr.html'
     }
 });
 
@@ -1103,7 +1103,7 @@ mod.directive('harmonizomeBar', function() {
             };
 
         }],
-        templateUrl: '/libs/lincs-direct-access-tools/templates/harmonizome.html'
+        templateUrl: 'libs/lincs-direct-access-tools/templates/harmonizome.html'
     }
 });
 
@@ -1127,7 +1127,7 @@ mod.directive("hmsDbBar", function() {
                 // console.log("broadcast recieved: ", event, mode_id);
             });
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/hms-db.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/hms-db.html"
     }
 });
 
@@ -1144,7 +1144,7 @@ mod.directive("lifeBar", function() {
                     "_blank");
             };
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/life.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/life.html"
     }
 });
 
@@ -1169,7 +1169,7 @@ mod.directive("network2canvasBar", function() {
                 }
             };
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/network2canvas.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/network2canvas.html"
     }
 });
 
@@ -1192,7 +1192,7 @@ mod.directive("canvasBrowserBar", function() {
                 }
             };
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/canvas-browser.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/canvas-browser.html"
     }
 });
 
@@ -1215,7 +1215,7 @@ mod.directive("geo2enrichrBar", function() {
                 }
             };
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/geo2enrichr.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/geo2enrichr.html"
     }
 });
 
@@ -1238,7 +1238,7 @@ mod.directive("paeaBar", function() {
                 }
             };
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/paea.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/paea.html"
     }
 });
 
@@ -1298,7 +1298,7 @@ mod.directive("lincscloudBar", function() {
             });
 
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/templates/lincscloud.html"
+        templateUrl: "libs/lincs-direct-access-tools/templates/lincscloud.html"
     }
 });
 

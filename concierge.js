@@ -58,7 +58,7 @@ mod.directive("concierge", function() {
                     .not(this).addClass("subtle");
             });
         }],
-        templateUrl: "/libs/lincs-direct-access-tools/views/concierge.html"
+        templateUrl: "libs/lincs-direct-access-tools/views/concierge.html"
     }
 })
 
@@ -147,13 +147,14 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", "countWords", function
     // Centers data for display as directive: conciergeCenter
     $scope.centers_info = [
         {
-            name: "Drug Toxicity Signature Generation Center",
+            title: "Drug Toxicity Signature Generation Center",
             affiliation: "Icahn School of Medicine at Mount Sinai",
             logoUrl: "img/lincs-centers/dtox_logo2.png",
             tags: ["drug side effects", "cardiomyocytes", "hepatocytes", "neurons"],
             links: {
                 website: "http://dtoxs.org/", 
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/dtoxs/"
+                // description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/dtoxs/"
+                docs: "docs/DToxS"
             },
             description: "The Drug Toxicity Signature Generation Center aims to develop cell signatures that will predict adverse events that might be caused by drugs and will identify other drugs that might lessen these side effects. The center will leverage the U.S. Food and Drug Administration’s (FDA) Adverse Event Reporting System database to identify drugs that produce adverse events in heart, liver and neuronal function, and to search for drugs that may mitigate these events.",
             text: "The Drug Toxicity Signature Generation Center is a NIH-funded Systems Pharmacology research center at the Icahn School of Medicine. The proteomics experiments for the center are conducted at the Center for Advanced Proteomics, Rutgers-New Jersey Medical School. DToxS is part of the LINCS consortium of centers. LINCS (Library of Integrated Network-Based Cellular Signatures) is a program supported by the NIH Common Fund. The goals of the LINCS consortium as stated on the LINCS website at the NIH include the “large-scale production of perturbation-induced molecular and cellular signatures and the development of the informatics and analytical tools that enable utilization by all of the research community \
@@ -167,13 +168,15 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", "countWords", function
                 "
         },
         {
-            name: "HMS LINCS Center",
+            title: "HMS LINCS Center",
             affiliation: "Harvard Medical School",
             logoUrl: "img/lincs-centers/hms_lincs.png",
             tags: ["dose response", "drug sensitivity", "drug resistance", "kinase inhibitors", "epigenome modifiers", "growth factors", "inflammatory cytokines", "cancer", "autoimmune diseases"],
             links: {
                 website: "http://lincs.hms.harvard.edu/",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/hms-lincs-u54/"
+                // description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/hms-lincs-u54/"
+                docs: "docs/HMS-LINCS"
+
             },
             description: "The HMS LINCS Center develops new measurement methods and computer algorithms to detect and analyze perturbations induced by therapeutic drugs in healthy and diseased human cells.",
             text: "The Harvard Medical School (HMS) LINCS Center is funded by NIH grant U54 HL127365 and is part of the NIH Library of Integrated Network-based Cellular Signatures Program (LINCS). The overall goals of this program are to collect and disseminate data and analytical tools needed to understand how human cells respond to perturbation by drugs, the environment, and mutation. Further information about LINCS and other participating Centers is available at the program website. \
@@ -185,13 +188,14 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", "countWords", function
                 " 
         },
         {
-            name: "LINCS Center for Transcriptomics",
+            title: "LINCS Center for Transcriptomics",
             affiliation: "Broad Institute",
             logoUrl: "img/lincs-centers/cmap2.jpg",
             tags: ["transcriptomics", "cellular states", "protein function", "CRISPR knock-out", "shRNA knock-down", "ORF overexpression", "small-molecules", "user interfaces"],
             links: {
                 website: "http://www.lincscloud.org/",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/broad-trx/"
+                // description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/broad-trx/"
+                docs: "docs/LINCS-Transcriptomics"
             },
             description: "The LINCS Center for Transcriptomics is studying up to 50 cell types perturbed by a large number of chemical compounds and genetic reagents that activate or deactivate genes. Each perturbation will produce about 1,000 gene-expression readouts. By the project’s end, the center expects to have generated more than 1 million profiles of how genes are expressed in different cells.",
             text: "Our goal is to develop comprehensive signatures of cellular states and tools to analyze them in an effort to understand protein function, small-molecule action, physiological states, and disease characteristics. \
@@ -199,26 +203,28 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", "countWords", function
                 "
         },
         {
-            name: "LINCS Proteomic Characterization Center for Signaling and Epigenetics",
+            title: "LINCS Proteomic Characterization Center for Signaling and Epigenetics",
             affiliation: "Broad Institute",
             logoUrl: "img/lincs-centers/pccse1-300x67.png",
             tags: ["proteomics", "mass spectromertry", "epigenetics", "cellular states", "histone modifications", "pathway perturbations", "cancer cell lines", "neurobiology", "cellular differentiation"],
             links: {
                 resource: "https://panoramaweb.org/labkey/project/LINCS/begin.view",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/broad-prx/"
+                // description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/broad-prx/"
+                docs: "docs/LINCS-Proteomics"
             },
             description: "The LINCS Proteomic Characterization Center for Signaling and Epigenetics studies cell disruption at the most basic levels: phosphorylation-mediated signaling — that is, how cells communicate internally; and epigenetics, or how cells perpetuate non-genetic information as they grow.",
             text: "The LINCS Proteomic Characterization Center for Signaling and Epigenetics, under the direction of Dr. Jacob D. Jaffe of the Broad Institute, tests the hypothesis that early modulation of signaling events in response to perturbations can establish new cellular states by altering their epigenetic landscapes. Using cutting-edge mass spectrometry-based proteomics assays, the center broadly profiles cellular responses in the spaces of phosphosignaling and histone modifications (epigenetic “marks”) in a highly multiplexed manner. The center focuses on perturbing genes and pathways in foundational biology systems (such as cancer cell lines) and in neurobiological cellular differentiation paradigms (under direction of co-investigator Dr. Li-Huei Tsai of MIT). Next-generation proteomic data acquisition and analysis strategies to support these activities are being developed in the laboratory of Dr. Michael MacCoss of the University of Washington. \
             "
         },
         {
-            name: "Microenvironment Perturbagen (MEP) LINCS Center",
+            title: "Microenvironment Perturbagen (MEP) LINCS Center",
             affiliation: "Oregon Health and Science University",
             logoUrl: "img/lincs-centers/ohsu.jpg",
             tags: ["microenvironment", "RNA expression", "protein expression", "cellular imaging", "molecular networks"],
             links: {
                 resource: "https://www.synapse.org/#!Synapse:syn2862345/wiki/72486",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/oregon-u/"
+                // description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/oregon-u/"
+                docs: "docs/MEP"
             },
             description: "The MEP LINCS Center studies how both malignant and non-malignant cells are controlled by the microenvironments in which they live. The researchers will provide measurements of the impacts of thousands of different microenvironments on cellular phenotypes, protein make-up and gene expression readouts in cell lines.",
             text: "Our goal in this project is to contribute to further development of the NIH Library of Integrated Network-based cellular signatures (LINCS) program by developing a dataset and computational strategy to elucidate how microenvironment (ME) signals affect cell intrinsic intracellular transcriptional- and protein-defined molecular networks to generate experimentally observable cellular phenotypes. We will infer these regulatory relationships by combining measurements of ME perturbagen-induced changes in multiple cellular phenotypes, RNA expression and regulatory protein expression in a core set of cell lines with measurements of responses of the same lines to chemical and genomic perturbagens made by our team in other projects and by other LINCS sites. Our data will complement existing perturbagen response LINCS data by providing information on ME perturbagen-induced changes and by providing quantitative image based measurements of seven cellular response phenotypes plus associated changes in gene transcription and regulatory protein expression. Integrative analysis of these data will enable us to address four key questions: \
@@ -229,13 +235,14 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", "countWords", function
             "
         },
         {
-            name: "NeuroLINCS Center",
+            title: "NeuroLINCS Center",
             affiliation: "University of California, Irvine",
             logoUrl: "img/lincs-centers/neurolincs.png",
             tags: ["astrocytes", "oligodendrocytes", "neurodegenerative diseases", "iPSC", "disease modeling", "omics", "statistics"],
             links: {
                 website: "http://www.neurolincs.org/",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/neurolincs/"
+                // description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/neurolincs/"
+                docs: "docs/NeuroLINCS"
             },
             description: "The NeuroLINCS Center concentrates on human brain cells, which are far less understood than other cells in the body. The researchers believe it will be necessary to study these cell types directly to understand the causes of neurological disease and to develop new therapies. By applying LINCS-type perturbations to studying an array of human brain cells, the researchers hope to identify targets for developing drugs against neurodegenerative diseases such as Parkinson’s disease, amyotrophic lateral sclerosis (ALS, also known as Lou Gehrig’s disease), spinal muscular atrophy and Huntington’s disease.",
             text: "The NeuroLINCS Center is an NIH-funded collaborative effort between various research groups with expertise in iPSC technology, disease modeling, OMICS methods, and computational biology. The participating research groups are from the University of California- Irvine, Cedars Sinai, the Gladstone Institute, MIT, and Johns Hopkins University. Together, the NeuroLINCS data and signature generation center studies human brain cells to understand the causes of neurological disease and to develop new therapies. NeuroLINCS is part of the LINCS (Library of Integrated Network-based Cellular Signatures) consortium of centers, which is supported by the NIH Common Fund. \
@@ -345,6 +352,6 @@ modLincsCenters.directive("conciergeCenter", function() {
             }
 
         }],
-        templateUrl: "/public/templates/CenterTemp.html"
+        templateUrl: "public/templates/CenterTemp.html"
     };
 });
