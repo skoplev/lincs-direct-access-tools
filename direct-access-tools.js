@@ -716,7 +716,12 @@ mod.directive("tool", ["$compile", "$timeout", function($compile, $timeout) {
             $scope.text_title = $("<html>" + $scope.toolData.title + "</html>").text();
             // console.log($scope.text_title);
 
-            $scope.main_description = $sce.trustAsHtml($scope.toolData.description.main);
+            try {
+                $scope.main_description = $sce.trustAsHtml($scope.toolData.description.main);
+            }
+            catch(err) {
+                $scope.main_description = $sce.trustAsHtml("None");
+            }
 
             // For inherited "Dot" syntax in child controllers.
             // Query template.
