@@ -1,5 +1,5 @@
 var mod = angular.module('LincsDirectAccessTools', 
-    ["mgcrea.ngStrap.popover"]
+    ["mgcrea.ngStrap.popover", "ngTagsInput"]
     // ['ngTagsInput', 'ui.bootstrap.tooltip']  // for tooltips
 );
 
@@ -430,7 +430,7 @@ mod.controller('DirectAccessToolsCtrl',
             url: "http://www.lincscloud.org/",
             image: DIR + "cmap2.jpg",
             description: {
-                main: "Designed to make LINCS L1000 data accessible to a wide audience.",
+                main: "Designed to make LINCS L1000 data accessible to a wide audience, the lincscloud has tools for analyzing and accessing the L1000 gene expression dataset.",
                 api: "For programmatic access refer to the <a target='_blank' href='http://api.lincscloud.org/'>API documentation</a>.",
                 analysis: "Web-based analysis of the L1000 dataset in the CLUE unified research environment. In development.",
                 search: "The API can be used for searching the L1000 dataset. Note that the direct access search only provides a small fraction of the functionality available through the API.",
@@ -484,7 +484,7 @@ mod.controller('DirectAccessToolsCtrl',
             url: "http://lincs.hms.harvard.edu/db/",
             image: DIR + "hms_lincs.png",
             description: {
-                main: "Harvard Medical School's LINCS database.",
+                main: "Harvard Medical School's LINCS database documents experimental conditions including small molecules, antibodies, and cell lines. The site contains the data contributed to LINCS and interactive visualizations.",
                 search: "General text-based search. Find datasets and information about experimental reagents. Small-molecule compounds can be queried based on SMILES.",
                 download: "Data is hosted on the web-site and can be downloaded.",
                 api: "Programmatic access is detailed in the <a target='_blank' href='https://docs.google.com/document/d/1R_d_1UWO0C9y1TceXpKIUkhjk08DfvP1D19txi4Tbas/edit'>URL Scheme and Access Guide</a>.",
