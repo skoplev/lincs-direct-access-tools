@@ -872,7 +872,7 @@ mod.directive('iLincsBar', ["$compile", function($compile) {
         link: function(scope, element, attrs) {
             // scope.searchTerm = '';
         },
-        controller: ['$scope', '$http', function($scope, $http) {
+        controller: ['$scope', "$element", '$http', function($scope, $element, $http) {
 
             $scope.search_type_options = [
                 {name: 'LINCS', value: "Lincs.jsp?"},
@@ -893,6 +893,17 @@ mod.directive('iLincsBar', ["$compile", function($compile) {
                 // key = map_[path];
                 var searchUrl = base_url + $scope.query.option + "keyword=" + $scope.query.term;
                 window.open(searchUrl, '_blank');
+            };
+            $scope.loadTutorials = function() {
+                if ($scope.tutorials_shown) {
+                    // remove toggle
+                    $scope.tutorials_shown = false;
+                    $element.find("#tutorial1").empty();
+                } else {
+                    // load and show
+                    $scope.tutorials_shown = true;
+                    $element.find("#tutorial1").html("<iframe src='https://www.youtube.com/embed/CU1qS_kAFVs' frameborder='0' allowfullscreen></iframe>");
+                }
             };
         }],
         templateUrl: 'libs/lincs-direct-access-tools/templates/i-lincs.html'
@@ -965,7 +976,18 @@ mod.directive('l1000cds2Textarea', function() {
                         // a.text('L1000CDS2 results');
                     }
                 });
-            }
+            };
+            $scope.loadTutorials = function() {
+                if ($scope.tutorials_shown) {
+                    // remove toggle
+                    $scope.tutorials_shown = false;
+                    $element.find("#tutorial1").empty();
+                } else {
+                    // load and show
+                    $scope.tutorials_shown = true;
+                    $element.find("#tutorial1").html("<iframe src='https://www.youtube.com/embed/kiTAGlvoyWU' frameborder='0' allowfullscreen></iframe>");
+                }
+            };
         }],
         templateUrl: 'libs/lincs-direct-access-tools/templates/l1000cds2.html'
     }
