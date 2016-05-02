@@ -306,7 +306,7 @@ mod.controller('DirectAccessToolsCtrl',
                 main: "Principal Angle Enrichment Analysis (PAEA) is a gene set enrichment analysis web application implemented in R/Shiny.",
                 analysis: "PAEA implements a multivariate approach to perform gene-set enrichment analysis. This approach is an extension of the Charactaristic Direction method and it outperforms standard methods such as GSEA and the Fisher test.",
                 external: "70 gene set libraries available for enrichment analysis.",
-                publication: "<a target='_blank' href='[http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4737646/'>Principal Angle Enrichment Analysis (PAEA): Dimensionally reduced multivariate gene set enrichment analysis tool</a>."
+                publication: "<a target='_blank' href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4737646/'>Principal Angle Enrichment Analysis (PAEA): Dimensionally reduced multivariate gene set enrichment analysis tool</a>."
             },
             modes: {
                 functionality: ["analysis"],
@@ -340,12 +340,12 @@ mod.controller('DirectAccessToolsCtrl',
                 main: "Predictive model of small-molecule side effects based on the L1000 data.",
                 integration: "The model integrates the L1000 data with side effect data from SIDER.",
                 drugs: "Predictions made from a LINCS collection of 20,000 small-molecule compounds.",
-                navigation: "The side effect predictions can be navigated on a 2 dimensional bubble chart representation."
-
+                navigation: "The side effect predictions can be navigated on a 2 dimensional bubble chart representation.",
+                publication: "<a target='_blank' href='http://bioinformatics.oxfordjournals.org/content/early/2016/04/20/bioinformatics.btw168'>Drug-induced adverse events prediction with the LINCS L1000 data</a>."
             },
             modes: {
                 functionality: ["integration", "navigation"],
-                content: ["drugs"]
+                content: ["drugs", "publication"]
             },
             directive: "SEP-L1000-Bar"
         },
