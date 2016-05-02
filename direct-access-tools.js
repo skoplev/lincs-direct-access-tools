@@ -333,6 +333,23 @@ mod.controller('DirectAccessToolsCtrl',
             }
         },
         {
+            title: "SEP-L1000",
+            url: "http://maayanlab.net/SEP-L1000",
+            image: DIR + "logo-sep.png",
+            description: {
+                main: "Predictive model of small-molecule side effects based on the L1000 data.",
+                integration: "The model integrates the L1000 data with side effect data from SIDER.",
+                drugs: "Predictions made from a LINCS collection of 20,000 small-molecule compounds.",
+                navigation: "The side effect predictions can be navigated on a 2 dimensional bubble chart representation."
+
+            },
+            modes: {
+                functionality: ["integration", "navigation"],
+                content: ["drugs"]
+            },
+            directive: "SEP-L1000-Bar"
+        },
+        {
             title: "LINCS Canvas Browser",
             url: "http://www.maayanlab.net/LINCS/LCB",
             image: DIR + "lincs-canvas-browser.png",
@@ -1343,6 +1360,23 @@ mod.directive("lincscloudBar", function() {
         templateUrl: "libs/lincs-direct-access-tools/templates/lincscloud.html"
     }
 });
+
+mod.directive("sepL1000Bar", function() {
+    return {
+        restrict: "E",
+        scope: true,  // important for inheriting the functions and data structures of the <tool> parent scope
+        controller: ["$scope", function($scope) {
+            var search_url = "http://maayanlab.net/SEP-L1000/#search/"
+
+            $scope.search = function() {
+                window.open(search_url + $scope.query.term, '_blank');
+            };
+
+        }],
+        templateUrl: "libs/lincs-direct-access-tools/templates/SEP-L1000.html"
+    }
+});
+
 
 
 // Tool directive extension template
