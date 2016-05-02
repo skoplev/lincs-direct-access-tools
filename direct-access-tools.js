@@ -330,7 +330,8 @@ mod.controller('DirectAccessToolsCtrl',
             modes: {
                 functionality: ["navigation", "collaboration", "search", "download"],
                 content: ["external"]
-            }
+            },
+            directive: "CREEDS-Bar"
         },
         {
             title: "SEP-L1000",
@@ -339,7 +340,7 @@ mod.controller('DirectAccessToolsCtrl',
             description: {
                 main: "Predictive model of small-molecule side effects based on the L1000 data.",
                 integration: "The model integrates the L1000 data with side effect data from SIDER.",
-                drugs: "Predictions made from a LINCS collection of 20,000 small-molecule compounds.",
+                drugs: "The predictions made from a LINCS collection of 20,000 small-molecule compounds.",
                 navigation: "The side effect predictions can be navigated on a 2 dimensional bubble chart representation.",
                 publication: "<a target='_blank' href='http://bioinformatics.oxfordjournals.org/content/early/2016/04/20/bioinformatics.btw168'>Drug-induced adverse events prediction with the LINCS L1000 data</a>."
             },
@@ -1376,6 +1377,23 @@ mod.directive("sepL1000Bar", function() {
         templateUrl: "libs/lincs-direct-access-tools/templates/SEP-L1000.html"
     }
 });
+
+mod.directive("creedsBar", function() {
+    return {
+        restrict: "E",
+        scope: true,  // important for inheriting the functions and data structures of the <tool> parent scope
+        controller: ["$scope", function($scope) {
+            var search_url = "http://amp.pharm.mssm.edu/CREEDS/index.html#similarity/"
+
+            $scope.search = function() {
+                window.open(search_url + $scope.query.term, '_blank');
+            };
+
+        }],
+        templateUrl: "libs/lincs-direct-access-tools/templates/CREEDS.html"
+    }
+});
+
 
 
 
