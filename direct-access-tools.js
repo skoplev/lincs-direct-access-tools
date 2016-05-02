@@ -805,7 +805,7 @@ mod.directive('lincsDataPortalBar', function() {
         link: function(scope, element, attrs, ctrls) {
             // console.log("lincsDataPortalBar controller: ", ctrls);
         },
-        controller: ['$scope', '$http', function($scope, $http) {
+        controller: ['$scope', '$http', '$element', function($scope, $http, $element) {
             $scope.query = $scope.$parent.query;  // query binding from parent
 
             $scope.searchTypeOptions = [
@@ -827,6 +827,18 @@ mod.directive('lincsDataPortalBar', function() {
                 return $http.get(suggest_url + searchTerm).then(function(response) {
                     return response.data.suggestTerms;
                 });
+            };
+            $scope.loadTutorials = function() {
+                if ($scope.tutorials_shown) {
+                    // remove toggle
+                    $scope.tutorials_shown = false;
+                    $element.find("#tutorial1").empty();
+                } else {
+                    // load and show
+                    $scope.tutorials_shown = true;
+                    // $element.find("#tutorial1").html("<iframe src='https://www.youtube.com/embed/CU1qS_kAFVs' frameborder='0' allowfullscreen></iframe>");
+                    $element.find("#tutorial1").html("<iframe src='https://www.youtube.com/embed/dBgccwNRri4?list=PL0Bwuj8819U9YWHbAbfj_RG9Q3xIOq7wo' frameborder='0' allowfullscreen></iframe>");
+                }
             };
         }],
         templateUrl: 'libs/lincs-direct-access-tools/templates/lincs-data-portal.html'

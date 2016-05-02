@@ -1,3 +1,7 @@
+<button class="btn btn-default btn-sm" ng-click="loadTutorials()">Tutorials</button>
+<div class="tutorials">
+    <div id="tutorial1"></div>
+</div>
 <select ng-model="query.option"
         ng-init="search_type = search_Type || searchTypeOptions[0].value"
         ng-options="option.value as option.name for option in searchTypeOptions">
