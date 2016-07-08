@@ -318,7 +318,7 @@ mod.controller('DirectAccessToolsCtrl',
         {
             title: "CREEDS",
             url: "http://amp.pharm.mssm.edu/CREEDS",
-            image: DIR + "CREEDS.png",
+            image: DIR + "creeds.png",
             description: {
                 main: "Crowd extracted expression of differential signatures.",
                 navigation: "Global visualization of all signatures in a bubble chart or heatmap.",
