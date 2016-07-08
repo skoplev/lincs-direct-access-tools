@@ -945,7 +945,7 @@ mod.directive('iLincsBar', ["$compile", function($compile) {
                 } else {
                     // load and show
                     $scope.tutorials_shown = true;
-                    $element.find("#tutorial1").html("<iframe src='https://www.youtube.com/embed/CU1qS_kAFVs' frameborder='0' allowfullscreen></iframe>");
+                    $element.find("#tutorial1").html("<iframe src='https://www.youtube.com/embed/qBRLabOFvjQ' frameborder='0' allowfullscreen></iframe>");
                 }
             };
         }],
