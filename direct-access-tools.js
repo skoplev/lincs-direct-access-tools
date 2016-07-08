@@ -498,6 +498,19 @@ mod.controller('DirectAccessToolsCtrl',
             }
         },
         {
+            title: "GUIdock",
+            url: "https://github.com/WebDataScience/GUIdock",
+            image: DIR + "gui_dock.fw.png",
+            description: {
+                main: "A method for deploying containers with a graphical user interface.",
+                publication: "<a target='_blank' href='http://dx.doi.org/10.1371/journal.pone.0152686'>GUIdock: Using Docker Containers with a Common Graphics User Interface to Address the Reproducibility of Research</a>"
+            },
+            modes: {
+                functionality: [""],
+                content: ["publication"]
+            }
+        },
+        {
             title: "HMS LINCS Database",
             url: "http://lincs.hms.harvard.edu/db/",
             image: DIR + "hms_lincs.png",
