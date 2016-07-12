@@ -253,11 +253,12 @@ mod.controller('DirectAccessToolsCtrl',
                 api: "Data can be accessed programmatically through GET requests. Consult the <a target='_blank' href='http://amp.pharm.mssm.edu/Harmonizome/documentation'>API documentation</a> for more information.",
                 download: "Processed data can be downloaded in various formats including gene set libraries, attribute tables, and networks.",
                 external: "External data are collected from many different large-scale omics projects.",
-                analysis: "Datasets can be analyzed for correlations across resources using different measures of similarity."
+                analysis: "Datasets can be analyzed for correlations across resources using different measures of similarity.",
+                publication: "<a target='_blank' href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4930834/'>The harmonizome: a collection of processed datasets gathered to serve and mine knowledge about genes and proteins</a>."
             },
             modes: {
                 functionality: ["search", "api", "download", "analysis"],
-                content: ["external"]
+                content: ["external", "publication"]
             },
             directive: 'harmonizome-bar',
             cssClass: 'harmonizome'
