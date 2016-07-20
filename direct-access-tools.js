@@ -226,6 +226,23 @@ mod.controller('DirectAccessToolsCtrl',
             cssClass: "p100mosaic"
         },
         {
+            title: "MEP Mosaic",
+            url: "http://amp.pharm.mssm.edu/MEPmosaic",
+            image: DIR + "cells_grid.svg",
+            description: {
+                main: "Mosaic visualization of high-content imaging assays of cancer cell lines following treatment with ligand-microenvironment pairs.",
+                navigation: "Clusters of correlated of ligand-microenvironment pairs can be investigated using 2D canvas visualizations.",
+                integration: "Imaging data are integrated across staining sets allowing for comparison across cellular features related to morphology, metabolism, cell cycle, nuclear state, and lineage status.",
+                cells: "Small set of cancer cell lines including MCF7, PC3, and YAPC."
+            },
+            modes: {
+                functionality: ["navigation", "integration"],
+                content: ["cells"]
+            },
+            // directive: "P100mosaic-bar",
+            cssClass: "p100mosaic"
+        },
+        {
             title: "Gen3va",
             url: "http://amp.pharm.mssm.edu/gen3va/",
             image: DIR + "gen3va_logo.png",
