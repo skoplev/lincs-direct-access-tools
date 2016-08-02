@@ -226,6 +226,23 @@ mod.controller('DirectAccessToolsCtrl',
             cssClass: "p100mosaic"
         },
         {
+            title: "MEP Mosaic",
+            url: "http://amp.pharm.mssm.edu/MEPmosaic",
+            image: DIR + "cells_grid.svg",
+            description: {
+                main: "Mosaic visualization of high-content imaging assays of cancer cell lines following treatment with ligand-microenvironment pairs.",
+                navigation: "Clusters of correlated of ligand-microenvironment pairs can be investigated using 2D canvas visualizations.",
+                integration: "Imaging data are integrated across staining sets allowing for comparison across cellular features related to morphology, metabolism, cell cycle, nuclear state, and lineage status.",
+                cells: "Small set of cancer cell lines including MCF7, PC3, and YAPC."
+            },
+            modes: {
+                functionality: ["navigation", "integration"],
+                content: ["cells"]
+            },
+            // directive: "P100mosaic-bar",
+            cssClass: "p100mosaic"
+        },
+        {
             title: "Gen3va",
             url: "http://amp.pharm.mssm.edu/gen3va/",
             image: DIR + "gen3va_logo.png",
@@ -253,11 +270,12 @@ mod.controller('DirectAccessToolsCtrl',
                 api: "Data can be accessed programmatically through GET requests. Consult the <a target='_blank' href='http://amp.pharm.mssm.edu/Harmonizome/documentation'>API documentation</a> for more information.",
                 download: "Processed data can be downloaded in various formats including gene set libraries, attribute tables, and networks.",
                 external: "External data are collected from many different large-scale omics projects.",
-                analysis: "Datasets can be analyzed for correlations across resources using different measures of similarity."
+                analysis: "Datasets can be analyzed for correlations across resources using different measures of similarity.",
+                publication: "<a target='_blank' href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4930834/'>The harmonizome: a collection of processed datasets gathered to serve and mine knowledge about genes and proteins</a>."
             },
             modes: {
                 functionality: ["search", "api", "download", "analysis"],
-                content: ["external"]
+                content: ["external", "publication"]
             },
             directive: 'harmonizome-bar',
             cssClass: 'harmonizome'
@@ -318,7 +336,7 @@ mod.controller('DirectAccessToolsCtrl',
         {
             title: "CREEDS",
             url: "http://amp.pharm.mssm.edu/CREEDS",
-            image: DIR + "CREEDS.png",
+            image: DIR + "creeds.png",
             description: {
                 main: "Crowd extracted expression of differential signatures.",
                 navigation: "Global visualization of all signatures in a bubble chart or heatmap.",
@@ -495,6 +513,19 @@ mod.controller('DirectAccessToolsCtrl',
             modes: {
                 functionality: ["collaboration", "education"],
                 // content: [""]
+            }
+        },
+        {
+            title: "GUIdock",
+            url: "https://github.com/WebDataScience/GUIdock",
+            image: DIR + "gui_dock.fw.png",
+            description: {
+                main: "A method for deploying containers with a graphical user interface.",
+                publication: "<a target='_blank' href='http://dx.doi.org/10.1371/journal.pone.0152686'>GUIdock: Using Docker Containers with a Common Graphics User Interface to Address the Reproducibility of Research</a>"
+            },
+            modes: {
+                functionality: [""],
+                content: ["publication"]
             }
         },
         {
