@@ -174,7 +174,7 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", function($scope) {
             tags: ["dose response", "drug sensitivity", "drug resistance", "kinase inhibitors", "epigenome modifiers", "growth factors", "inflammatory cytokines", "cancer", "autoimmune diseases"],
             links: {
                 website: "http://lincs.hms.harvard.edu/",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/hms-lincs-u54/"
+                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/hms-lincs/"
                 // docs: "docs/HMS-LINCS"
             },
             description: "The HMS LINCS Center develops new measurement methods and computer algorithms to detect and analyze perturbations induced by therapeutic drugs in healthy and diseased human cells.",
@@ -193,7 +193,7 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", function($scope) {
             tags: ["transcriptomics", "cellular states", "protein function", "CRISPR knock-out", "shRNA knock-down", "ORF overexpression", "small-molecules", "user interfaces"],
             links: {
                 website: "http://www.lincscloud.org/",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/broad-trx/"
+                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/lincs-transcriptomics/"
                 // docs: "docs/LINCS-Transcriptomics"
             },
             description: "The LINCS Center for Transcriptomics is studying up to 50 cell types perturbed by a large number of chemical compounds and genetic reagents that activate or deactivate genes. Each perturbation will produce about 1,000 gene-expression readouts. By the project’s end, the center expects to have generated more than 1 million profiles of how genes are expressed in different cells.",
@@ -208,7 +208,7 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", function($scope) {
             tags: ["proteomics", "mass spectromertry", "epigenetics", "cellular states", "histone modifications", "pathway perturbations", "cancer cell lines", "neurobiology", "cellular differentiation"],
             links: {
                 resource: "https://panoramaweb.org/labkey/project/LINCS/begin.view",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/broad-prx/"
+                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/lincs-pccse/"
                 // docs: "docs/LINCS-Proteomics"
             },
             description: "The LINCS Proteomic Characterization Center for Signaling and Epigenetics studies cell disruption at the most basic levels: phosphorylation-mediated signaling — that is, how cells communicate internally; and epigenetics, or how cells perpetuate non-genetic information as they grow.",
@@ -222,7 +222,7 @@ modLincsCenters.controller("lincsCentersCtrl", ["$scope", function($scope) {
             tags: ["microenvironment", "RNA expression", "protein expression", "cellular imaging", "molecular networks"],
             links: {
                 resource: "https://www.synapse.org/#!Synapse:syn2862345/wiki/72486",
-                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/oregon-u/"
+                description: "http://www.lincsproject.org/centers/data-and-signature-generating-centers/mep-lincs/"
                 // docs: "docs/MEP"
             },
             description: "The MEP LINCS Center studies how both malignant and non-malignant cells are controlled by the microenvironments in which they live. The researchers will provide measurements of the impacts of thousands of different microenvironments on cellular phenotypes, protein make-up and gene expression readouts in cell lines.",
